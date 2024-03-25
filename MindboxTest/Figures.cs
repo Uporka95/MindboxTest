@@ -39,7 +39,7 @@ namespace MindboxTest
             {
                 var sides = new List<double>() { A, B, C };
                 sides.Sort((x, y) => y.CompareTo(x));
-                return Math.Pow(sides[0], 2) == (Math.Pow(sides[1], 2) + Math.Pow(sides[2], 2));
+                return Math.Abs(Math.Pow(sides[0], 2) - (Math.Pow(sides[1], 2) + Math.Pow(sides[2], 2))) < 0.1;
             }
         }
 
